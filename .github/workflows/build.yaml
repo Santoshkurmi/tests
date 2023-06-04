@@ -20,11 +20,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Installing artools in the system
         run: |
-          mv mirrorlist /etc/pacman.d/mirrorlist
           cp -r config/metis-mirrorlist* /etc/pacman.d/
           cp -r config/pacman.conf /etc/pacman.conf
           cp -r config/mirrorlist /etc/pacman.d/mirrorlist
-          pacman --noconfirm -Sy ruby artools iso-profiles
+          pacman --noconfirm -Sy ruby artools iso-profiles man-pages man
 
       - name: Setting up  filesystem for the build
         run: |
