@@ -40,8 +40,8 @@ jobs:
           mkdir ~/.config/artools -p
           cp -r config/pacman-default.conf ~/.config/artools/pacman-default.conf 
 
-          bash build-iso.sh 
-          #buildiso -q
+          #bash build-iso.sh 
+          buildiso -q -i runit
           #buildiso -p base -i runit -t iso
           echo "NOW=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
