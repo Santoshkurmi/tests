@@ -39,7 +39,7 @@ jobs:
           cp base ~/artools-workspace/iso-profiles -r
           mkdir ~/.config/artools -p
           cp -r config/pacman-default.conf ~/.config/artools/pacman-default.conf 
-
+          cp -r config/pacman.conf ~/.config/artools/pacman.conf
           ./build-iso.sh 
           buildiso -q -i runit
           #buildiso -p base -i runit -t iso
