@@ -20,8 +20,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Installing artools in the system
         run: |
-          bash rankmirrors -n 20 /etc/pacman.d/mirrorlist > mirrorlist 
-          mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old
           mv mirrorlist /etc/pacman.d/mirrorlist
           cp -r config/metis-mirrorlist* /etc/pacman.d/
           cp -r config/pacman.conf /etc/pacman.conf
